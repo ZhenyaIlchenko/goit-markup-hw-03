@@ -46,18 +46,13 @@ img {
 	height: auto;
 }
 
-button {
-	/* display: block; */
-	/* max-width: 0 auto; */
-}
-
 .container {
 	width: 100%;
 	max-width: 1200px;
 	padding-left: 15px;
 	padding-right: 15px;
 	margin: 0 auto;
-	outline: 2px solid tomato;
+	/* outline: 2px solid tomato; */
 }
 
 .visually-hidden {
@@ -74,6 +69,7 @@ button {
 }
 
 /* Logo header and footer */
+
 .logo {
 	font-family: "Raleway";
 	font-weight: 700;
@@ -99,7 +95,8 @@ button {
 .header {
 	background-color: var(--first-bgcolor);
 	padding-top: 24px;
-	padding-bottom: 25px;
+	padding-bottom: 24px;
+	border-bottom: 1px solid #ececec;
 }
 
 .header > .container {
@@ -168,6 +165,7 @@ button {
 }
 
 /* Footer */
+
 .footer {
 	background-color: var(--second-bgcolor);
 	padding-top: 60px;
@@ -176,6 +174,7 @@ button {
 
 .footer-address {
 	font-style: normal;
+	margin-top: 20px;
 }
 .footer-item {
 	font-size: 14px;
@@ -206,6 +205,7 @@ button {
 
 /* Main page Studio */
 /* Section Hero */
+
 .hero {
 	background-color: var(--second-bgcolor);
 	text-align: center;
@@ -218,7 +218,6 @@ button {
 	font-size: 44px;
 	line-height: 1.36;
 
-	/* text-align: center; */
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
 
@@ -237,13 +236,10 @@ button {
 	font-size: 16px;
 	line-height: 1.88;
 
-	/* display: flex;
-	align-items: center;
-	text-align: center; */
 	letter-spacing: 0.06em;
 
 	color: var(--primary-white-color);
-	/* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
 
 	cursor: pointer;
@@ -266,10 +262,19 @@ button {
 	background-color: var(--third-bgcolor);
 	padding-top: 94px;
 	padding-bottom: 0;
-	/* padding-bottom: 94px; */
 }
+
 .features-list {
 	display: flex;
+	column-gap: 30px;
+}
+
+.features-item {
+	font-size: 14px;
+	line-height: 1.71;
+	letter-spacing: 0.03em;
+
+	max-width: 270px;
 }
 
 .features-title {
@@ -280,20 +285,17 @@ button {
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
 
+	margin-bottom: 10px;
+
 	/* color: #212121; */
 }
 
-.features-item {
-	font-size: 14px;
-	line-height: 1.71;
-	letter-spacing: 0.03em;
-}
-
 /* Section About */
+
 .about {
 	background-color: var(--third-bgcolor);
 	padding-top: 94px;
-	padding-bottom: 94;
+	padding-bottom: 94px;
 }
 
 .about-title {
@@ -306,16 +308,30 @@ button {
 	margin-bottom: 50px;
 }
 
+.about-list {
+	display: flex;
+	gap: 30px;
+}
+
 /* Section Team */
+
 .team {
 	background-color: var(--fourth-bgcolor);
 	padding-top: 94px;
 	padding-bottom: 94px;
 }
+.team-list {
+	display: flex;
+	gap: 30px;
+}
 
 .team-item {
 	background-color: var(--primary-white-color);
+	width: calc((100%-90px) / 4);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 0px 0px 4px 4px;
 }
+
 .team-main-title {
 	font-weight: 700;
 	font-size: 36px;
@@ -331,27 +347,38 @@ button {
 	font-size: 16px;
 	line-height: 1.19;
 
-	/* text-align: center; */
+	text-align: center;
 	letter-spacing: 0.03em;
+
+	margin-top: 30px;
+	margin-bottom: 10px;
 }
 
 .team-info {
 	font-size: 16px;
 	line-height: 1.19;
 
-	/* text-align: center; */
+	text-align: center;
 	letter-spacing: 0.03em;
+
+	margin-bottom: 30px;
 }
 /* Main page Portfolio */
 
 .portfolio {
 	background-color: var(--third-bgcolor);
+
 	padding-top: 94px;
 	padding-bottom: 94px;
 }
 
-.list-button {
-	margin-bottom: 34px;
+.portfolio-list-button {
+	margin-bottom: 50px;
+
+	display: flex;
+	justify-content: center;
+
+	gap: 8px;
 }
 .portfolio-btn {
 	background: var(--fourth-bgcolor);
@@ -368,9 +395,9 @@ button {
 	color: var(--title-text-color);
 
 	cursor: pointer;
+	border-radius: 4px;
 
-	/* display: block;
-	margin: 0 auto; */
+	padding: 6px 22px;
 }
 
 .portfolio-btn:hover,
@@ -379,8 +406,16 @@ button {
 	background-color: var(--accent-color);
 }
 
+.portfolio-list-img {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+
 .portfolio-item {
 	background-color: var(--primary-white-color);
+	width: calc((100% - 60px) / 3);
+	text-align: left;
 }
 
 .portfolio-title {
@@ -389,10 +424,20 @@ button {
 	line-height: 2;
 
 	letter-spacing: 0.06em;
+
+	margin-top: 20px;
+	margin-bottom: 4px;
 }
 .portfolio-info {
 	font-size: 16px;
 	line-height: 1.87;
 
 	letter-spacing: 0.03em;
+
+	margin-bottom: 20px;
+}
+
+.portfolio-title-info {
+	padding-left: 24px;
+	border: 1px solid #eeeeee;
 }
