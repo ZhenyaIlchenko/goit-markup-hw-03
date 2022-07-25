@@ -7,7 +7,6 @@
 	--second-btn-color: #188ce8;
 	--first-bgcolor: #ffffff;
 	--second-bgcolor: #2f303a;
-	--third-bgcolor: #e5e5e5;
 	--fourth-bgcolor: #f5f4fa;
 	--footer-mail-tel-color: rgba(255, 255, 255, 0.6);
 }
@@ -94,8 +93,6 @@ img {
 
 .header {
 	background-color: var(--first-bgcolor);
-	padding-top: 24px;
-	padding-bottom: 24px;
 	border-bottom: 1px solid #ececec;
 }
 
@@ -123,7 +120,8 @@ img {
 	color: var(--title-text-color);
 
 	display: inline-block;
-	padding: 20px;
+	padding-top: 32px;
+	padding-bottom: 32px;
 }
 
 .header-link.active {
@@ -155,6 +153,10 @@ img {
 	letter-spacing: 0.02em;
 
 	color: var(--primary-text-color);
+
+	display: inline-block;
+	padding-top: 32px;
+	padding-bottom: 32px;
 }
 
 .header-mail:hover,
@@ -176,6 +178,11 @@ img {
 	font-style: normal;
 	margin-top: 20px;
 }
+
+.footer-address-item:not(:last-child) {
+	margin-bottom: 9px;
+}
+
 .footer-item {
 	font-size: 14px;
 	line-height: 1.71;
@@ -241,6 +248,7 @@ img {
 	color: var(--primary-white-color);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
+	border: none;
 
 	cursor: pointer;
 
@@ -258,10 +266,13 @@ img {
 
 /* Section Features */
 
-.features {
-	background-color: var(--third-bgcolor);
+.section {
 	padding-top: 94px;
-	padding-bottom: 0;
+	padding-bottom: 94px;
+}
+
+.features {
+	background-color: var(--first-bgcolor);
 }
 
 .features-list {
@@ -293,9 +304,8 @@ img {
 /* Section About */
 
 .about {
-	background-color: var(--third-bgcolor);
-	padding-top: 94px;
-	padding-bottom: 94px;
+	background-color: var(--first-bgcolor);
+	padding-top: 0;
 }
 
 .about-title {
@@ -317,8 +327,7 @@ img {
 
 .team {
 	background-color: var(--fourth-bgcolor);
-	padding-top: 94px;
-	padding-bottom: 94px;
+	padding-top: 0;
 }
 .team-list {
 	display: flex;
@@ -366,10 +375,7 @@ img {
 /* Main page Portfolio */
 
 .portfolio {
-	background-color: var(--third-bgcolor);
-
-	padding-top: 94px;
-	padding-bottom: 94px;
+	background-color: var(--first-bgcolor);
 }
 
 .portfolio-list-button {
@@ -426,7 +432,6 @@ img {
 
 	letter-spacing: 0.06em;
 
-	margin-top: 20px;
 	margin-bottom: 4px;
 }
 .portfolio-info {
@@ -434,11 +439,10 @@ img {
 	line-height: 1.87;
 
 	letter-spacing: 0.03em;
-
-	margin-bottom: 20px;
 }
 
 .portfolio-title-info {
-	padding-left: 24px;
-	border: 1px solid #eeeeee;
+	padding: 20px 24px;
+	border: 1px solid #eee;
+	border-top: 0;
 }
